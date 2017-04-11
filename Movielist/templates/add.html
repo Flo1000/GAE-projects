@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Add a movie{% endblock title %}
+
+{% block page_content %}
+    <div class="page-header">
+      <h2>
+        Add a movie
+        <img src="http://www.clipartkid.com/images/308/films-choubeau-UzWhwr-clipart.jpg" class="pull-right" width="200" height="50">
+      </h2>
+    </div>
+
+    <form class="form-horizontal" method="post" action="/add">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+          <input name="name" type="name" class="form-control" id="name" placeholder="Type movie name...">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="rating" class="col-sm-2 control-label">Rating</label>
+        <div class="col-sm-10">
+          <input name="rating" type="rating" class="form-control" id="rating" placeholder="Rate the movie with a number from 1-5">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="piclink" class="col-sm-2 control-label">Picture Link</label>
+        <div class="col-sm-10">
+          <input name="piclink" type="piclink" class="form-control"  id="piclink" placeholder="Insert picture link" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-success">Add movie</button>
+        </div>
+      </div>
+    </form>
+
+{% endblock page_content %}

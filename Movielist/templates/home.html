@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block page_content %}
+    <div class="page-header">
+        <h2>
+            Movie rating
+            <img src="http://images.buycostumes.com/mgen/merchandiser/hollywood-metallic-film-border-roll-bc-24227.jpg" class="pull-right" width="900" height="40">
+        </h2>
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-primary" href="\add" role=""button">Add movie</a>
+    </div>
+
+    <br>
+    <br>
+
+    <table class="table table-striped" style="width:100%">
+
+            <tr>
+                <th><h4>Movie</h4></th>
+                <th><h4>Rating</h4></th>
+                <th><h4>Picturelink</h4></th>
+            </tr>
+
+        {% for i in movies%}
+            <tr>
+                <td><p>{{ i.name }}</td>
+                <td><div style="font-size: 30px">{{ "*" * i.rating }}</div></td>
+                <td><img src="{{ i.piclink }}" height="100" width="100" class="img-thumbnail"></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock page_content %}
